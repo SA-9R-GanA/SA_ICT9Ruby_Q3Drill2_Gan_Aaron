@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background-color: #e0e0e0;
+        }
+        
+        .calc {
+            width: 300px;
+            margin: 0 auto;
+            background-color: black;
+            padding: 50px;
+            border-radius: 10px;
+        }
+        
+        .screen {
+            background-color: #333;
+            color: white;
+            font-size: 32px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            min-height: 50px;
+        }
+        
+        .number-box {
+            padding: 10px;
+            font-size: 18px;
+            width: 80px;
+            text-align: center;
+            margin: 5px;
+            border: 2px solid blue;
+            border-radius: 5px;
+        }
+        
+        .plus-sign {
+            font-size: 24px;
+            color: white;
+            margin: 0 5px;
+        }
+        
+        .add-btn {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        
+        .answer {
+            font-size: 28px;
+            color: green;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Basic Calculator (MULTIPLYING ONLY)</h1>
+
+<div class="calc">
+    <div class="screen" id="screen">0</div>
+    
+    <div>
+        <input type="number" class="number-box" id="a" placeholder="0">
+        
+        <input type="number" class="number-box" id="b" placeholder="0">
+    </div>
+    
+    <button class="add-btn" onclick="doAdd()">=</button>
+    
+    <script>
+    function doAdd() {
+
+        let a = Number(document.getElementById("a").value) || 0;
+        let b = Number(document.getElementById("b").value) || 0;
+        
+
+        let total = a * b;
+        
+        
+        document.getElementById("screen").innerHTML = total;
+        
+       
+        document.getElementById("answer").innerHTML = a + " + " + b + " = " + total;
+    }
+</script>
+</div>
+
